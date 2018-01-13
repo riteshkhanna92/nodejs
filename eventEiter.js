@@ -2,7 +2,7 @@
  var eventEmitter = new events.EventEmitter();
 
  var customEvent = function() {
-     console.log('from custom event')
+     //console.log('from custom event')
 
  }
  eventEmitter.on('testEvent', customEvent);
