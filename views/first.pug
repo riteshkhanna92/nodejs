@@ -1,8 +1,12 @@
 html
-   head
-      title = name
-   body
-      h1 Greetings from #{name}
-      a(href = url) URL
-      //-  img(src = "/MARBLES.jpg")
-      include ./second.pug
+  head
+    link(rel='stylesheet', href='/cssFiles/home.css')
+    script(src='/jsFiles/jquery-3.2.1.min.js')
+    script(src='/jsFiles/home.js')
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")  
+    body
+        form(action='loginMethod',method='GET')
+         div
+           input(type="submit" value="submit")    
+         
