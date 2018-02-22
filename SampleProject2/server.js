@@ -1,9 +1,15 @@
 var http=require("http");
 var express=require("express");
 var app=express();
+
+//cors enabling
+const cors = require('cors');
+app.use(cors());
+
 var bodyParser=require("body-parser");
 var controller=require("./api");
-var cors = require('cors');
+
+
 var response={};
 //controller configuaration
 app.use('/api',controller);
@@ -13,7 +19,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(__dirname + '/public'));
   
-app.use(cors());
+ 
  
  
 

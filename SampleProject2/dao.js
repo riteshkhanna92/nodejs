@@ -61,7 +61,7 @@ module.exports.booklist=function(callback){
                         }
                         else {
     
-                            callback(400,results);
+                            callback(null,results);
                         }
                         }
                     });

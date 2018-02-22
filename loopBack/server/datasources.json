@@ -1,0 +1,15 @@
+{
+  "mysql_db": {
+    "host": "localhost",
+    "port": 3306,
+    "database": "newmisdatabase",
+    "username": "root",
+    "password": "rritss",
+    "name": "mysql_db",
+    "connector": "mysql"
+   
+    
+    
+   
+  }
+}

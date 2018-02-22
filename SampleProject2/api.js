@@ -2,6 +2,7 @@ var express=require("express");
 var app=express();
 var router=express.Router();
 var dao=require("./dao");
+var bodyParser = require('body-parser');
 var bookList=[];
 var response={};
 //console.log('inisde api.js');
@@ -64,7 +65,8 @@ console.log('inisde api'+JSON.stringify(parameter1))
         response.Failure,
         response.message="error occured.",
         response.result=data;
-        res.status(400).json(response);
+        res.status(500).json(response);
+
 
        
        }
@@ -80,12 +82,14 @@ console.log('inisde api'+JSON.stringify(parameter1))
    
     
 })
-router.post('/createBook',function(req,res){
-   var inpuBody={};
-  inpuBody=req.body;
+router.post('/createBook',bodyParser.json(),function(req,res){
+   
+    
+     
+    
    console.log('  this.inpuBody'+JSON.stringify(req.body))
     
-       dao.insertBook((inpuBody),function(error,data){
+       dao.insertBook((req.body),function(error,data){
    
           if(error){
            response.statusCode= 400,
