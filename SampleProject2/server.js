@@ -1,7 +1,7 @@
 var http=require("http");
 var express=require("express");
 var app=express();
-
+ 
 //cors enabling
 const cors = require('cors');
 app.use(cors());
